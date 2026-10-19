@@ -10,7 +10,7 @@ import base.BaseTest;
 public class CheckoutTest extends BaseTest {
 
     // Ovvoru test-ku MUNNADI: login -> oru product add -> cart open -> Checkout click
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void reachCheckoutPage() throws Exception {
         login(VALID_USER, VALID_PASSWORD);
         addToCart("sauce-labs-backpack");
