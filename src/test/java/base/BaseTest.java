@@ -34,7 +34,7 @@ public class BaseTest {
     public static final String MY_USERNAME = "kali@123";
     public static final String MY_PASSWORD = "kaali@2203";
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
         ChromeOptions options = new ChromeOptions();
 
@@ -51,7 +51,7 @@ public class BaseTest {
         Thread.sleep(2000);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = ture)
     public void tearDown() {
         if (driver != null) {
             driver.quit();
